@@ -11,7 +11,8 @@ const port = process.env.PORT || 4000;
 const table_init = require('./table_setup');
 table_init.table_init();
 
-const cors = require('cors')
+const cors = require('cors');
+app.use(express.static('client'))
 app.use(cors({
   origin: "*"
 }))
