@@ -4,13 +4,13 @@ const { pool } = require('../dbConfig');
 const ver_tools = require('../tools/verifiers');
 
 router.get('/', (req, res) => {
-    if (!req.headers.authorization) {
-        return res.status(401).send({ message: 'Missing Authorization header' });
-    }
-    const pid = ver_tools.login_ver(req.headers.authorization.split(' ')[1]);
-    if (pid < 0) {
-        return res.status(403).send({ message: 'Invalid credentials' });
-    }
+    // if (!req.headers.authorization) {
+    //     return res.status(401).send({ message: 'Missing Authorization header' });
+    // }
+    // const pid = ver_tools.login_ver(req.headers.authorization.split(' ')[1]);
+    // if (pid < 0) {
+    //     return res.status(403).send({ message: 'Invalid credentials' });
+    // }
     pool.query('SELECT * FROM Help')
     .then((helpdata) => {
         const dataList = helpdata.rows.map((row) => ({
