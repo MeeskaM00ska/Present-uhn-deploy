@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'D2-uhn-be'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C300C14D33BB4874BB8D2E82581833DA }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BC9F9642995749069120FBA1203405DB }}
           package: .
